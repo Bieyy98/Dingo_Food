@@ -25,10 +25,10 @@ $menu = new menuController();
 $menu_id = $_GET['id']; 
 $data = $menu->viewMenu($menu_id);
 
+
 if(isset($_POST['add']))
 {
   $orders->AddOrders();
-  
 
 }
 
