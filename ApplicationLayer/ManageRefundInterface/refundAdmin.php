@@ -155,6 +155,10 @@ function makeConnect($sql){
 
   </div>
   <center>
+    <form>
+    <input type="button" value="Go back!" onclick="history.back()">
+    </form>
+
     <h2> Refund request list</h2>
     <form method="post">
     <table class="content-table">
