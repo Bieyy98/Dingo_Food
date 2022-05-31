@@ -11,7 +11,6 @@ $customer = new customerController();
 
 $orders = new orderController();
 
-
 $data = $customer->viewCustomer($customer_id);
 
 /* Database connection settings */
