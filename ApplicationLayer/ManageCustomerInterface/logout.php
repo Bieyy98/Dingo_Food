@@ -5,6 +5,6 @@
 session_start(); 
 session_unset();
 session_destroy(); 
-header('location: /Project/ApplicationLayer/ManageCustomerInterface/login.php');
+header('location: /Dingo_Food/ApplicationLayer/ManageCustomerInterface/login.php');
 exit();
 ?>

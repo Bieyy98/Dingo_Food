@@ -62,7 +62,7 @@ class customerController {
         if($customer->registerCust() > 0){
                 $message = "Customer Successfully Registered!";
             echo "<script type='text/javascript'>alert('$message');
-            window.location = '/Project/ApplicationLayer/ManageCustomerInterface/login.php';</script>";
+            window.location = '/Dingo_Food/ApplicationLayer/ManageCustomerInterface/login.php';</script>";
             }
     }
         

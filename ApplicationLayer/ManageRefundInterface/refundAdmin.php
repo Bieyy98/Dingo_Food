@@ -36,8 +36,8 @@ function makeConnect($sql){
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-      <link rel="stylesheet" href="/Project/css/dingo.css">
-      <link rel="stylesheet" href="/Project/css/dingo.css">
+      <link rel="stylesheet" href="/Dingo_Food/css/dingo.css">
+      <link rel="stylesheet" href="/Dingo_Food/css/dingo.css">
 
          <script language="javascript" type="text/javascript">
          window.history.forward();
@@ -56,8 +56,8 @@ function makeConnect($sql){
          <link href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.css" rel="stylesheet"
              type='text/css'>
          </link>
-         <link href="/Project/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-         <link rel="stylesheet" href="/Project/css/home.css">
+         <link href="/Dingo_Food/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+         <link rel="stylesheet" href="/Dingo_Food/css/home.css">
     <style>
     body, html {
         height: 100%;
@@ -66,7 +66,7 @@ function makeConnect($sql){
     }
 
     .hero-image {
-        background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("/Project/img/dingoLogo4.jfif");
+        background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("/Dingo_Food/img/dingoLogo4.jfif");
         height: 50%;
         background-position: center;
         background-repeat: no-repeat;
@@ -75,7 +75,7 @@ function makeConnect($sql){
     }
 
     .hero-image2 {
-        background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/Project/img/wall4.jpg");
+        background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/Dingo_Food/img/wall4.jpg");
         height: 50%;
         background-position: center;
         background-repeat: no-repeat;
@@ -142,13 +142,13 @@ function makeConnect($sql){
     <div id="menu-nav">
     <div style="list-style-type: none;" id="navigation-bar">
        <ul>
-      <li><a href="/Project/ApplicationLayer/ManageAdminInterface/adminHome.php"><i class="fa fa-home"></i><span>Home</span></a></li>
-      <li><a href="/Project/ApplicationLayer/ManageMenuInterface/listMenu.php"><i class="fa fa-list"></i><span>List</span></a></li>
-      <li><a href="/Project/ApplicationLayer/ManageMenuInterface/addMenu.php"><i class="fa fa-plus"></i><span>New Menu</span></a></li>
-      <li><a href="/Project/ApplicationLayer/ManageRefundInterface/refundAdmin.php"><i class="fa fa-money"></i><span>Refund</span></a></li>
-      <li><a href="/Project/ApplicationLayer/ManageReportInterface/indexAdmin.php"><i class="fa fa-bar-chart"></i><span>Report</span></a></li>
-    <li><a href="/Project/ApplicationLayer/ManageAdminInterface/adminLogout.php" onclick="return confirm('Are you sure you want to sign out?')"><i class="fa fa-sign-out"></i><span>Sign Out</span></a></li>
-    <a href="/Project/ApplicationLayer/ManageAdminInterface/adminProfile.php" id="topnav-right"><i class="fa fa-user"></i><span>Hello <?php echo $admin_username; ?> </span></a>
+      <li><a href="/Dingo_Food/ApplicationLayer/ManageAdminInterface/adminHome.php"><i class="fa fa-home"></i><span>Home</span></a></li>
+      <li><a href="/Dingo_Food/ApplicationLayer/ManageMenuInterface/listMenu.php"><i class="fa fa-list"></i><span>List</span></a></li>
+      <li><a href="/Dingo_Food/ApplicationLayer/ManageMenuInterface/addMenu.php"><i class="fa fa-plus"></i><span>New Menu</span></a></li>
+      <li><a href="/Dingo_Food/ApplicationLayer/ManageRefundInterface/refundAdmin.php"><i class="fa fa-money"></i><span>Refund</span></a></li>
+      <li><a href="/Dingo_Food/ApplicationLayer/ManageReportInterface/indexAdmin.php"><i class="fa fa-bar-chart"></i><span>Report</span></a></li>
+    <li><a href="/Dingo_Food/ApplicationLayer/ManageAdminInterface/adminLogout.php" onclick="return confirm('Are you sure you want to sign out?')"><i class="fa fa-sign-out"></i><span>Sign Out</span></a></li>
+    <a href="/Dingo_Food/ApplicationLayer/ManageAdminInterface/adminProfile.php" id="topnav-right"><i class="fa fa-user"></i><span>Hello <?php echo $admin_username; ?> </span></a>
     </ul>
 
     </div>

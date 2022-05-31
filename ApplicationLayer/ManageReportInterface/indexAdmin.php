@@ -5,7 +5,7 @@ session_start();
 $host = 'localhost';
 $user = 'root';
 $pass = '';
-$database = 'kinderpal';
+$database = 'dingofood';
 //$mysqli = new mysqli($host,$user,$pass,$db) or die($mysqli->error);
 $conn=mysqli_connect($host,$user,$pass,$database);
 if($conn){
@@ -31,16 +31,16 @@ $admin_username = $_SESSION['admin_username'];
     <title>Admin Homepage</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="/Project/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/Dingo_Food/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom fonts for this template -->
-    <link href="/Project/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-    <link href="/Project/vendor/simple-line-icons/css/simple-line-icons.css" rel="stylesheet" type="text/css">
+    <link href="/Dingo_Food/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="/Dingo_Food/vendor/simple-line-icons/css/simple-line-icons.css" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">	
 	<link href='https://fonts.googleapis.com/css?family=Aclonica' rel='stylesheet'>
     <!-- Custom styles for this template -->
-    <link href="/Project/css/landing-page.min.css" rel="stylesheet">
-	<link rel="stylesheet" href="/Project/css/homePage.css">
+    <link href="/Dingo_Food/css/landing-page.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="/Dingo_Food/css/homePage.css">
 
   </head>
 	<style>
@@ -51,7 +51,7 @@ $admin_username = $_SESSION['admin_username'];
   font-family: Arial, Helvetica, sans-serif;
 }
 .hero-image {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("/Project/img/dingoLogo4.jfif");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("/Dingo_Food/img/dingoLogo4.jfif");
   height: 50%;
   background-position: center;
   background-repeat: no-repeat;
@@ -60,7 +60,7 @@ $admin_username = $_SESSION['admin_username'];
 }
 
 .hero-image2 {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/Project/img/wall4.jpg");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/Dingo_Food/img/wall4.jpg");
   height: 50%;
   background-position: center;
   background-repeat: no-repeat;
@@ -181,13 +181,13 @@ a, a:hover { color: black; text-decoration : none; }
   <div id="menu-nav">
   <div style="list-style-type: none;" id="navigation-bar">
      <ul>
-      <li><a href="/Project/ApplicationLayer/ManageAdminInterface/adminHome.php"><i class="fa fa-home"></i><span>Home</span></a></li>
-      <li><a href="/Project/ApplicationLayer/ManageMenuInterface/listMenu.php"><i class="fa fa-list"></i><span>List</span></a></li>
-      <li><a href="/Project/ApplicationLayer/ManageMenuInterface/addMenu.php"><i class="fa fa-plus"></i><span>New Menu</span></a></li>
-      <li><a href="/Project/ApplicationLayer/ManageRefundInterface/refundAdmin.php"><i class="fa fa-money"></i><span>Refund</span></a></li>
-      <li><a href="/Project/ApplicationLayer/ManageReportInterface/indexAdmin.php"><i class="fa fa-bar-chart"></i><span>Report</span></a></li>
-    <li><a href="/Project/ApplicationLayer/ManageAdminInterface/adminLogout.php" onclick="return confirm('Are you sure you want to sign out?')"><i class="fa fa-sign-out"></i><span>Sign Out</span></a></li>
-    <a href="/Project/ApplicationLayer/ManageAdminInterface/adminProfile.php" id="topnav-right"><i class="fa fa-user"></i><span>Hello <?php echo $admin_username; ?> </span></a>
+      <li><a href="/Dingo_Food/ApplicationLayer/ManageAdminInterface/adminHome.php"><i class="fa fa-home"></i><span>Home</span></a></li>
+      <li><a href="/Dingo_Food/ApplicationLayer/ManageMenuInterface/listMenu.php"><i class="fa fa-list"></i><span>List</span></a></li>
+      <li><a href="/Dingo_Food/ApplicationLayer/ManageMenuInterface/addMenu.php"><i class="fa fa-plus"></i><span>New Menu</span></a></li>
+      <li><a href="/Dingo_Food/ApplicationLayer/ManageRefundInterface/refundAdmin.php"><i class="fa fa-money"></i><span>Refund</span></a></li>
+      <li><a href="/Dingo_Food/ApplicationLayer/ManageReportInterface/indexAdmin.php"><i class="fa fa-bar-chart"></i><span>Report</span></a></li>
+    <li><a href="/Dingo_Food/ApplicationLayer/ManageAdminInterface/adminLogout.php" onclick="return confirm('Are you sure you want to sign out?')"><i class="fa fa-sign-out"></i><span>Sign Out</span></a></li>
+    <a href="/Dingo_Food/ApplicationLayer/ManageAdminInterface/adminProfile.php" id="topnav-right"><i class="fa fa-user"></i><span>Hello <?php echo $admin_username; ?> </span></a>
     </ul>
 
   </div>
@@ -195,7 +195,7 @@ a, a:hover { color: black; text-decoration : none; }
 </div>
 
     <!-- Masthead -->
-        <header class="masthead text-white text-center" style="background-image : url('/Project/img/adminbg.jpg');">	
+        <header class="masthead text-white text-center" style="background-image : url('/Dingo_Food/img/adminbg.jpg');">	
 <div class="row" style="color: black">
 
 
@@ -244,18 +244,18 @@ a, a:hover { color: black; text-decoration : none; }
 
   
    <!-- Bootstrap core JavaScript -->
-    <script src="/Project/vendor/jquery/jquery.min.js"></script>
-    <script src="/Project/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="/Dingo_Food/vendor/jquery/jquery.min.js"></script>
+    <script src="/Dingo_Food/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
     <!-- Plugin JavaScript -->
-    <script src="/Project/vendor/jquery-easing/jquery.easing.min.js"></script>
+    <script src="/Dingo_Food/vendor/jquery-easing/jquery.easing.min.js"></script>
 
     <!-- Contact form JavaScript -->
-    <script src="/Project/js/jqBootstrapValidation.js"></script>
-    <script src="/Project/js/contact_me.js"></script>
+    <script src="/Dingo_Food/js/jqBootstrapValidation.js"></script>
+    <script src="/Dingo_Food/js/contact_me.js"></script>
 
     <!-- Custom scripts for this template -->
-    <script src="/Project/js/agency.min.js"></script>
+    <script src="/Dingo_Food/js/agency.min.js"></script>
 
     <script src="../js/main.js"></script>
   </body>

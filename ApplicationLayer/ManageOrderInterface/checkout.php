@@ -64,7 +64,7 @@ if($_SESSION['status'] == null){
         rel="stylesheet"  type='text/css'>
     </link>
         <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="/Project/css/home.css">
+    <link rel="stylesheet" href="/Dingo_Food/css/home.css">
 
 <style>
 body, html {
@@ -74,7 +74,7 @@ body, html {
 }
 
 .hero-image {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("/Project/img/dingoLogo4.jfif");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("/Dingo_Food/img/dingoLogo4.jfif");
   height: 50%;
   background-position: center;
   background-repeat: no-repeat;
@@ -143,13 +143,13 @@ ul {
   <div id="menu-nav">
   <div style="list-style-type: none;" id="navigation-bar">
     <ul>
-                <li><a href="/Project/ApplicationLayer/ManageCustomerInterface/home.php"><i class="fa fa-home"></i><span>Home</span></a></li>
-                <li><a href="/Project/ApplicationLayer/ManageMenuInterface/viewMenu.php"><i class="fa fa-book"></i><span>Menu</span></a></li>
-                <li><a href="/Project/ApplicationLayer/ManageOrderInterface/cart.php"><i class="fa fa-shopping-cart"></i><span>Cart</span></a></li>
-                <li><a href="/Project/ApplicationLayer/ManageRefundInterface/refundList.php"><i class="fa fa-money"></i><span>Refund</span></a></li>
-                <li><a href="/Project/ApplicationLayer/ManageCustomerInterface/logout.php" onclick="return confirm('Are you sure you want to sign out?')"><i class="fa fa-sign-out"></i><span>Sign Out</span></a></li>
+                <li><a href="/Dingo_Food/ApplicationLayer/ManageCustomerInterface/home.php"><i class="fa fa-home"></i><span>Home</span></a></li>
+                <li><a href="/Dingo_Food/ApplicationLayer/ManageMenuInterface/viewMenu.php"><i class="fa fa-book"></i><span>Menu</span></a></li>
+                <li><a href="/Dingo_Food/ApplicationLayer/ManageOrderInterface/cart.php"><i class="fa fa-shopping-cart"></i><span>Cart</span></a></li>
+                <li><a href="/Dingo_Food/ApplicationLayer/ManageRefundInterface/refundList.php"><i class="fa fa-money"></i><span>Refund</span></a></li>
+                <li><a href="/Dingo_Food/ApplicationLayer/ManageCustomerInterface/logout.php" onclick="return confirm('Are you sure you want to sign out?')"><i class="fa fa-sign-out"></i><span>Sign Out</span></a></li>
                 
-                <a href="/Project/ApplicationLayer/ManageCustomerInterface/customerProfile.php" id="topnav-right"><i class="fa fa-user"></i><span>Hello <?php echo $name; ?></span></a>
+                <a href="/Dingo_Food/ApplicationLayer/ManageCustomerInterface/customerProfile.php" id="topnav-right"><i class="fa fa-user"></i><span>Hello <?php echo $name; ?></span></a>
             </ul>
 
   </div>
@@ -177,18 +177,18 @@ ul {
 
 
     <!-- Bootstrap core JavaScript -->
-    <script src="/Project/vendor/jquery/jquery.min.js"></script>
-    <script src="/Project/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="/Dingo_Food/vendor/jquery/jquery.min.js"></script>
+    <script src="/Dingo_Food/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
     <!-- Plugin JavaScript -->
-    <script src="/Project/vendor/jquery-easing/jquery.easing.min.js"></script>
+    <script src="/Dingo_Food/vendor/jquery-easing/jquery.easing.min.js"></script>
 
     <!-- Contact form JavaScript -->
-    <script src="/Project/js/jqBootstrapValidation.js"></script>
-    <script src="/Project/js/contact_me.js"></script>
+    <script src="/Dingo_Food/js/jqBootstrapValidation.js"></script>
+    <script src="/Dingo_Food/js/contact_me.js"></script>
 
     <!-- Custom scripts for this template -->
-    <script src="/Project/js/agency.min.js"></script>
+    <script src="/Dingo_Food/js/agency.min.js"></script>
 
 
 

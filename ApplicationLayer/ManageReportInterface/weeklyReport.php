@@ -36,13 +36,13 @@ $data = $report->viewWeeklyReport();
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js" type="text/javascript"></script>
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
-<link rel="stylesheet" href="/Project/css/monthlyStyle.css">
+<link rel="stylesheet" href="/Dingo_Food/css/monthlyStyle.css">
 		
      
       
     </script>
-	<link rel="stylesheet" href="\Project\css\homePage.css">
-    <link rel="stylesheet" href="\Project\css\tableMonthly.css">
+	<link rel="stylesheet" href="\Dingo_Food\css\homePage.css">
+    <link rel="stylesheet" href="\Dingo_Food\css\tableMonthly.css">
 	<style>
   <!-- NAVIGATION STYLE -->
   body, html {
@@ -51,7 +51,7 @@ $data = $report->viewWeeklyReport();
   font-family: Arial, Helvetica, sans-serif;
 }
 .hero-image {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("/Project/img/dingoLogo4.jfif");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("/Dingo_Food/img/dingoLogo4.jfif");
   height: 50%;
   background-position: center;
   background-repeat: no-repeat;
@@ -60,7 +60,7 @@ $data = $report->viewWeeklyReport();
 }
 
 .hero-image2 {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/Project/img/wall4.jpg");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/Dingo_Food/img/wall4.jpg");
   height: 50%;
   background-position: center;
   background-repeat: no-repeat;
@@ -196,13 +196,13 @@ ul {
   <div id="menu-nav">
   <div style="list-style-type: none;" id="navigation-bar">
      <ul>
-      <li><a href="/Project/ApplicationLayer/ManageAdminInterface/adminHome.php"><i class="fa fa-home"></i><span>Home</span></a></li>
-      <li><a href="/Project/ApplicationLayer/ManageMenuInterface/listMenu.php"><i class="fa fa-list"></i><span>List</span></a></li>
-      <li><a href="/Project/ApplicationLayer/ManageMenuInterface/addMenu.php"><i class="fa fa-plus"></i><span>New Menu</span></a></li>
-      <li><a href="/Project/ApplicationLayer/ManageRefundInterface/refundAdmin.php"><i class="fa fa-money"></i><span>Refund</span></a></li>
-      <li><a href="/Project/ApplicationLayer/ManageReportInterface/indexAdmin.php"><i class="fa fa-bar-chart"></i><span>Report</span></a></li>
-    <li><a href="/Project/ApplicationLayer/ManageAdminInterface/adminLogout.php" onclick="return confirm('Are you sure you want to sign out?')"><i class="fa fa-sign-out"></i><span>Sign Out</span></a></li>
-    <a href="/Project/ApplicationLayer/ManageAdminInterface/adminProfile.php" id="topnav-right"><i class="fa fa-user"></i><span>Hello <?php echo $admin_username; ?> </span></a>
+      <li><a href="/Dingo_Food/ApplicationLayer/ManageAdminInterface/adminHome.php"><i class="fa fa-home"></i><span>Home</span></a></li>
+      <li><a href="/Dingo_Food/ApplicationLayer/ManageMenuInterface/listMenu.php"><i class="fa fa-list"></i><span>List</span></a></li>
+      <li><a href="/Dingo_Food/ApplicationLayer/ManageMenuInterface/addMenu.php"><i class="fa fa-plus"></i><span>New Menu</span></a></li>
+      <li><a href="/Dingo_Food/ApplicationLayer/ManageRefundInterface/refundAdmin.php"><i class="fa fa-money"></i><span>Refund</span></a></li>
+      <li><a href="/Dingo_Food/ApplicationLayer/ManageReportInterface/indexAdmin.php"><i class="fa fa-bar-chart"></i><span>Report</span></a></li>
+    <li><a href="/Dingo_Food/ApplicationLayer/ManageAdminInterface/adminLogout.php" onclick="return confirm('Are you sure you want to sign out?')"><i class="fa fa-sign-out"></i><span>Sign Out</span></a></li>
+    <a href="/Dingo_Food/ApplicationLayer/ManageAdminInterface/adminProfile.php" id="topnav-right"><i class="fa fa-user"></i><span>Hello <?php echo $admin_username; ?> </span></a>
     </ul>
 
   </div>
@@ -261,7 +261,7 @@ ul {
 <!-- partial -->
 <script type="text/javascript" src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
   <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
-<script src='https://cdnjs.cloudflare.com/ajax/libs/snap.svg/0.3.0/snap.svg-min.js'></script><script  src="/Project/js/monthlyScript.js"></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/snap.svg/0.3.0/snap.svg-min.js'></script><script  src="/Dingo_Food/js/monthlyScript.js"></script>
 
   </div>	
 
