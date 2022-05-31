@@ -193,6 +193,8 @@ if (isset($_POST ['delete'])) {
         -webkit-border-radius: 5px;
         -moz-border-radius: 5px;
         border-radius: 10px;
+        border-color: white;
+        box-shadow: 3px 3px 5px #888888
     }
     .btn--aqua {
         background: #2699ab;
