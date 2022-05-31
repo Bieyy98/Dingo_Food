@@ -192,7 +192,13 @@ if (isset($_POST ['delete'])) {
     .btn--radius-2 {
         -webkit-border-radius: 5px;
         -moz-border-radius: 5px;
-        border-radius: 5px;
+        border-radius: 10px;
+    }
+    .btn--aqua {
+        background: #2699ab;
+    }
+    .btn--aqua:hover {
+        background: #228999;
     }
     .btn--red {
         background: #ff4b5a;
@@ -200,12 +206,12 @@ if (isset($_POST ['delete'])) {
     .btn--red:hover {
         background: #eb3746;
     } 
-    .btn--black {
+    /* .btn--black {
         background: #000000;
     }
     .btn--black:hover {
         background: #333333;
-    }
+    } */
 
     .wrapper {
         margin: 0 auto;
@@ -352,9 +358,10 @@ if (isset($_POST ['delete'])) {
                       . "<td>".$price."</td>";    ?>     
 
                       <td>
-                        <button class="btn btn--radius-2 btn--red" type="submit" name="update" value="Update">Update</button>
+                        <button class="btn btn--radius-2 btn--aqua" type="submit" name="update" value="Update">Update</button>
                         <br>
                         <input type="hidden" name="order_id" value="<?=$row['order_id']?>">
+                        <br>
                         <button class="btn btn--radius-2 btn--red" type="submit" name="delete" value="Delete">Delete</button>
                         <br>
                       </td>
@@ -396,9 +403,9 @@ if (isset($_POST ['delete'])) {
                     } ?>
 
                    <br></br>
-                   <td><button style="width: 30%;" class="btn btn--radius-2 btn--black" input type="button" name = "checkout" value="checkout" onclick="location.href='/Project/ApplicationLayer/ManageOrderInterface/checkout.php'">Checkout</button></td>
+                   <td><button style="width: 30%;" class="btn btn--radius-2 btn--red" input type="button" name = "checkout" value="checkout" onclick="location.href='/Project/ApplicationLayer/ManageOrderInterface/checkout.php'">Checkout</button></td>
                    <td>&nbsp</td>
-                   <td><button style="width: 30%;" class="btn btn--radius-2 btn--black" input type="button" name = "checkout" value="checkout" onclick="location.href = '/Project/ApplicationLayer/ManageMenuInterface/viewMenu.php'">CONTINUE SHOPPING</button></td>
+                   <td><button style="width: 30%;" class="btn btn--radius-2 btn--aqua" input type="button" name = "checkout" value="checkout" onclick="location.href = '/Project/ApplicationLayer/ManageMenuInterface/viewMenu.php'">CONTINUE SHOPPING</button></td>
                  
 
                    
