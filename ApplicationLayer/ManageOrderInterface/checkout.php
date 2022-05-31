@@ -158,8 +158,8 @@ ul {
      </div>
 <br>
 <br>
-<center><h1>THANK YOU</h1></center>
-<center><h1>Your Order Has been Checkout!</h1></center>
+<!-- <center><h1>THANK YOU</h1></center>
+<center><h1>Your Order Has been Checkout!</h1></center> -->
 
     
 
@@ -188,8 +188,15 @@ ul {
 
     <!-- Custom scripts for this template -->
     <script src="/Project/js/agency.min.js"></script>
-
-
+    <script src="/Project/js/sweetalert.min.js"></script>
+    <script>
+      swal({
+        title: "THANK YOU!",
+        text: "Your Order is Being Prepared",
+        icon: "success",
+        button: "OK",
+      });
+    </script>
 
         
       </body>
