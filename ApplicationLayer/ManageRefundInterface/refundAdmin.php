@@ -156,6 +156,10 @@ function makeConnect($sql){
   </div>
   <center>
     <h2> Refund request list</h2>
+    <form id="form"> 
+    <input type="search" id="query" name="q" placeholder="Search Refund ID">
+    <button>Search</button>
+    </form>
     <form method="post">
     <table class="content-table">
 
