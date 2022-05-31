@@ -166,7 +166,6 @@ function makeConnect($sql){
              <th>Time Request</th>
              <th>Approvement</th>
              <th>Test</th>
-
           </tr>
 
     <?php if($result_confirmation_refund->num_rows>0){
