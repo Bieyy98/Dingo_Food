@@ -1,6 +1,6 @@
 <?php 
 require_once 'C:/xampp/htdocs/Project/BusinessServiceLayer/controller/menuController.php';
-
+//testtt
 $sql = "SELECT * FROM `menu`";
 $res = mysqli_query($connection, $sql);
 
@@ -40,6 +40,30 @@ $pages_needed = ceil($total / $number_of_records);
 require_once '../../libs/custSession.php';
 
 $name = $_SESSION['username'];
+
+//Search function
+if(isset($_POST['search']))
+{
+    $valueToSearch = $_POST['valueToSearch'];
+    // search in all table columns
+    // using concat mysql function
+    $query = "SELECT * FROM `menu` WHERE CONCAT(`menu_id`, `menu_name`, `menu_category`, `menu_description`, `menu_status`, `cost`) LIKE '%".$valueToSearch."%'";
+    $search_result = filterTable($query);
+    
+}
+ else {
+    $query = "SELECT * FROM `menu`";
+    $search_result = filterTable($query);
+}
+
+// function to connect and execute the query
+function filterTable($query)
+{
+    $connect = mysqli_connect("localhost", "root", "", "dingofood");
+    $filter_Result = mysqli_query($connect, $query);
+    return $filter_Result;
+}
+
 
 ?>
 
@@ -280,30 +304,40 @@ $sno = $row + 1;
 
 <!-- DISPLAY MENU -->
 
-            <div class="col-sm-20 main-content">
-                <div class="row">
-            <?php
-                if (isset($errmsg)){
-                    echo "<h3>$errmsg</h3>";
-                }
-                foreach($data as $row){
-                    $menu_id = $row['menu_id'];
-                    echo "<div class='col-sm-4'>
-                    		<div class='card'>
-                    		<a href='/Project/ApplicationLayer/ManageOrderInterface/addOrder_Cart.php?menu_id=$menu_id'>
-                    		<img class='picture' src='/Project/img/". $row['menu_image'] ."'></a>
-                    			<h3>".$row['menu_name'] ."</h3>
-                    		
-                    			<p class='price'>RM". $row['menu_price'] ."</p>
-                    			<p>". $row['menu_description'] ."</p>
-      							<p class='status'> ". $row['menu_status'] ."</p>
-      							<p><a href='/Project/ApplicationLayer/ManageOrderInterface/addOrder_Cart.php?id=" . $row['menu_id'] . "'><button>Add to Cart</button></a></p>
-                    		</div>
-                    		<br><br>
-                    	</div>";
-   				}
-            ?>
-        		</div>
+<div class="col-sm-20 main-content">
+
+<form action="/Project/ApplicationLayer/ManageMenuInterface/viewMenu.php" method="post">
+<div style="display:flex;">
+  <input type="text" name="valueToSearch" placeholder="Search menu..."> &nbsp;
+  <input style="width: 30%; background-color: skyblue; color:black;" type="submit" name="search" value="Search">
+</div>
+<br>
+
+<table>
+    <tr>
+        <th>Image</th>
+        <th>Name</th>
+        <th>Price</th>
+        <th>Description</th>
+        <th>Status</th>
+        <th>Action</th>
+    </tr>
+
+<!-- populate table from mysql database -->
+    <?php while($row = mysqli_fetch_array($search_result)):?>
+    <tr>
+        <td><a href='/Project/ApplicationLayer/ManageOrderInterface/addOrder_Cart.php?menu_id=$menu_id'>
+        <img height="100px" class='picture' src='/Project/img/<?php echo $row['menu_image']; ?>'</a></td>
+        <td><?php echo $row['menu_name'];?></td>
+        <td><?php echo $row['menu_price'];?></td>
+        <td><?php echo $row['menu_description'];?></td>
+        <td><?php echo $row['menu_status'];?></td>
+        <td><a href='/Project/ApplicationLayer/ManageOrderInterface/addOrder_Cart.php?id="<?php echo $row['menu_id']; ?>"'><button>Add to Cart</button></a></td>
+        
+    </tr>
+    <?php endwhile;?>
+</table>
+</form>
 <br>
 
 <!-- MENU PAGE NUMBER -->
