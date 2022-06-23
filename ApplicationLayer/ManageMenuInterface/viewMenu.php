@@ -42,6 +42,7 @@ require_once '../../libs/custSession.php';
 $name = $_SESSION['username'];
 
 //Search function
+
 if(isset($_POST['search']))
 {
     $valueToSearch = $_POST['valueToSearch'];
@@ -64,8 +65,8 @@ function filterTable($query)
     return $filter_Result;
 }
 
-
 ?>
+
 
 <!DOCTYPE html>
 <html lang="en" >
@@ -96,6 +97,18 @@ function filterTable($query)
 <!-- STYLE -->
 
 <style>
+
+table,th,td,tr{
+  padding: 10px;
+  text-align:center;
+  border: 1px solid black;
+}
+
+th{
+  background-color: lightgrey;
+}
+
+
 * {
   box-sizing: border-box;
 }
@@ -112,7 +125,9 @@ body {
 }
 
 /* Remove extra left and right margins, due to padding */
-.row {margin: 0 -5px;}
+.row {
+  margin: 0 -5px;
+}
 
 /* Clear floats after the columns */
 .row:after {
@@ -149,20 +164,22 @@ body {
 }
 
 .picture {
-	width : 100%;
+  width: 100%;
 
 }
 
-.menu{
-    transition: all 0.25s ease ;
-    -webkit-transition: all 0.25s ease ;
-    -moz-transition: all 0.25s ease ;
-    -ms-transition: all 0.25s ease ;
-    -o-transition: all 0.25s ease ;
-    margin-bottom: 1rem;
+.menu {
+  transition: all 0.25s ease;
+  -webkit-transition: all 0.25s ease;
+  -moz-transition: all 0.25s ease;
+  -ms-transition: all 0.25s ease;
+  -o-transition: all 0.25s ease;
+  margin-bottom: 1rem;
 }
 
-.card:hover {box-shadow: 2px 2px 20px 5px #c99c9c;}
+.card:hover {
+  box-shadow: 2px 2px 20px 5px #c99c9c;
+}
 
 .card button {
   border: none;
@@ -180,7 +197,8 @@ body {
   opacity: 0.7;
 }
 
-body, html {
+body,
+html {
   height: 100%;
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
@@ -221,7 +239,7 @@ body, html {
 }
 
 ul {
-    list-style-type: none;
+  list-style-type: none;
 
 }
 
@@ -230,9 +248,10 @@ ul {
   position: absolute;
   background-color: #f9f9f9;
   min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   z-index: 1;
 }
+
 .dropdown-content a {
   float: none;
   color: black;
@@ -292,15 +311,18 @@ $sno = $row + 1;
 
 <!-- DISPLAY MENU ACCORDING MENU_CATEGORY -->
 
-<div class="container" style="margin-top:20px">
-        <center><h2><?php echo isset($_GET['menu_category'])? $_GET['menu_category']: '';?> Menu</h2>
-        <div class="row">
-        	<center>
-        		<a href="viewMenu.php">All</a> .
-                <a href="viewMenu.php?menu_category=Cake">Cake</a> .
-                <a href="viewMenu.php?menu_category=Beverage">Beverage</a> .
-                <a href="viewMenu.php?menu_category=Mini Bites">Mini Bites</a>
-<br><br><br>
+  <div class="container" style="margin-top:20px">
+    <center>
+      <h2>
+        <?php echo isset($_GET['menu_category'])? $_GET['menu_category']: '';?> Menu
+      </h2>
+      <div class="row">
+        <center>
+          <a href="viewMenu.php">All</a> .
+          <a href="viewMenu.php?menu_category=Cake">Cake</a> .
+          <a href="viewMenu.php?menu_category=Beverage">Beverage</a> .
+          <a href="viewMenu.php?menu_category=Mini Bites">Mini Bites</a>
+          <br><br>
 
 <!-- DISPLAY MENU -->
 
@@ -327,17 +349,18 @@ $sno = $row + 1;
     <?php while($row = mysqli_fetch_array($search_result)):?>
     <tr>
         <td><a href='/Project/ApplicationLayer/ManageOrderInterface/addOrder_Cart.php?menu_id=$menu_id'>
-        <img height="100px" class='picture' src='/Project/img/<?php echo $row['menu_image']; ?>'</a></td>
+        <img height="100px" class='picture' src='/Project/img/<?php echo $row['menu_image']; ?>'></a></td>
         <td><?php echo $row['menu_name'];?></td>
         <td><?php echo $row['menu_price'];?></td>
         <td><?php echo $row['menu_description'];?></td>
         <td><?php echo $row['menu_status'];?></td>
-        <td><a href='/Project/ApplicationLayer/ManageOrderInterface/addOrder_Cart.php?id="<?php echo $row['menu_id']; ?>"'><button>Add to Cart</button></a></td>
+        <td><a href='/Project/ApplicationLayer/ManageOrderInterface/addOrder_Cart.php?menu_id=$menu_id"<?php echo $row['menu_id']; ?>"'><button>Add to Cart</button></a></td>
         
     </tr>
     <?php endwhile;?>
 </table>
 </form>
+
 <br>
 
 <!-- MENU PAGE NUMBER -->
