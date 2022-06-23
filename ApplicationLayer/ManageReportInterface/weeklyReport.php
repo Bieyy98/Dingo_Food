@@ -267,8 +267,26 @@ ul {
 
 	<div id="centered">
 	<a class="button button1" href="indexAdmin.php" style="text-decoration:none; color: black;padding: 10px 50px;"><span>Back</span></a>
+  <a style="text-decoration:none; color: black; padding: 10px 50px;" class=" button button1" onclick="PrintElem()"><span>Print<span></a>
 	</div>
 
+  <script>
+        function PrintElem() {
+            var mywindow = window.open('', 'PRINT', 'height=600,width=400   ');
+            mywindow.document.write('<html><head><title>' + document.title + '</title>');
+            mywindow.document.write('</head><body >');
+            mywindow.document.write(document.getElementById("centered").innerHTML);
+            mywindow.document.write('</body></html>');
+
+            mywindow.document.close(); // necessary for IE >= 10
+            mywindow.focus(); // necessary for IE >= 10*/
+
+            mywindow.print();
+            mywindow.close();
+
+            return true;
+        }
+    </script>
 
   </body>
 </html>
