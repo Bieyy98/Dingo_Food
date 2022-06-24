@@ -14,7 +14,7 @@ if($conn){
      echo"Connection not successful" . mysqli_error($conn);
      die($conn);
 }
-require_once 'C:/xampp/htdocs/Project_DingoFood/Dingo_Food/BusinessServiceLayer/controller/menuController.php';
+require_once 'C:/xampp/htdocs/Dingo_Food/BusinessServiceLayer/controller/menuController.php';
 require_once '../../libs/database.php';
 require_once '../../libs/custSession.php';
 

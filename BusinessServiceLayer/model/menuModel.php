@@ -1,5 +1,5 @@
 <?php
-require_once 'C:/xampp/htdocs/Project_DingoFood/Dingo_Food/libs/database.php';
+require_once 'C:/xampp/htdocs/Dingo_Food/libs/database.php';
 
 class menuModel{
     
