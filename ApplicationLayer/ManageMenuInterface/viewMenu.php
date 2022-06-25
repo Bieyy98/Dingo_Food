@@ -1,6 +1,6 @@
 <?php 
 require_once 'C:/xampp/htdocs/Project/BusinessServiceLayer/controller/menuController.php';
-//testtt
+
 $sql = "SELECT * FROM `menu`";
 $res = mysqli_query($connection, $sql);
 
@@ -78,21 +78,21 @@ function filterTable($query)
 	window.history.forward();
 	</script>
 	
-  <meta charset="UTF-8">
+ <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
 
-		<link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css'>
-		<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto:300'>
+    <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css'>
+    <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto:300'>
 
-		<meta name="author" content="">
+    <meta name="author" content="">
 
-		<title>DINGO FOOD - Food Ordering System (FOS)</title>
-		<link href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.css" 
-				rel="stylesheet"  type='/Project/text/css'>
-		</link>
-		    <link href="/Project/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-		<link rel="stylesheet" href="/Project/css/home.css">
+    <title>DINGO FOOD - Food Ordering System (FOS)</title>
+    <link href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.css" rel="stylesheet"
+        type='text/css'>
+    </link>
+    <link href="/Project/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/Project/css/home.css"> 
 
 <!-- STYLE -->
 
@@ -295,15 +295,16 @@ $sno = $row + 1;
 
   <div style="list-style-type: none;" id="navigation-bar">
 
-	<ul>
-        <li><a href="/Project/ApplicationLayer/ManageCustomerInterface/home.php"><i class="fa fa-home"></i><span>Home</span></a></li>
-        <li><a href="/Project/ApplicationLayer/ManageMenuInterface/viewMenu.php"><i class="fa fa-book"></i><span>Menu</span></a></li>
-        <li><a href="/Project/ApplicationLayer/ManageOrderInterface/cart.php"><i class="fa fa-shopping-cart"></i><span>Cart</span></a></li>
-        <li><a href="/Project/ApplicationLayer/ManageRefundInterface/refundList.php"><i class="fa fa-money"></i><span>Refund</span></a></li>
-        <li><a href="/Project/ApplicationLayer/ManageCustomerInterface/logout.php" onclick="return confirm('Are you sure you want to sign out?')"><i class="fa fa-sign-out"></i><span>Sign Out</span></a></li>
+            <ul>
+                <li><a href="/Project/ApplicationLayer/ManageCustomerInterface/home.php"><i class="fa fa-home"></i><span>Home</span></a></li>
+                <li><a href="/Project/ApplicationLayer/ManageMenuInterface/viewMenu.php"><i class="fa fa-book"></i><span>Menu</span></a></li>
                 
-        <a href="/Project/ApplicationLayer/ManageCustomerInterface/customerProfile.php" id="topnav-right"><i class="fa fa-user"></i><span>Hello <?php echo $name; ?></span></a>
-    </ul>
+                <li><a href="/Project/ApplicationLayer/ManageOrderInterface/cart.php"><i class="fa fa-shopping-cart"></i><span>Cart</span></a></li>
+                <li><a href="/Project/ApplicationLayer/ManageRefundInterface/refundList.php"><i class="fa fa-money"></i><span>Refund</span></a></li>
+                <li><a href="/Project/ApplicationLayer/ManageCustomerInterface/logout.php" onclick="return confirm('Are you sure you want to sign out?')"><i class="fa fa-sign-out"></i><span>Sign Out</span></a></li>
+                
+                <a href="/Project/ApplicationLayer/ManageCustomerInterface/customerProfile.php" id="topnav-right"><i class="fa fa-user"></i><span>Hello <?php echo $name; ?></span></a>
+            </ul>
 
   </div>
   
@@ -312,16 +313,13 @@ $sno = $row + 1;
 <!-- DISPLAY MENU ACCORDING MENU_CATEGORY -->
 
   <div class="container" style="margin-top:20px">
-    <center>
-      <h2>
-        <?php echo isset($_GET['menu_category'])? $_GET['menu_category']: '';?> Menu
-      </h2>
-      <div class="row">
-        <center>
-          <a href="viewMenu.php">All</a> .
-          <a href="viewMenu.php?menu_category=Cake">Cake</a> .
-          <a href="viewMenu.php?menu_category=Beverage">Beverage</a> .
-          <a href="viewMenu.php?menu_category=Mini Bites">Mini Bites</a>
+    <center><h2><?php echo isset($_GET['menu_category'])? $_GET['menu_category']: '';?> Menu</h2>
+        <div class="row">
+          <center>
+            <a href="viewMenu.php">All</a> .
+                <a href="viewMenu.php?menu_category=Cake">Cake</a> .
+                <a href="viewMenu.php?menu_category=Beverage">Beverage</a> .
+                <a href="viewMenu.php?menu_category=Mini Bites">Mini Bites</a>
           <br><br>
 
 <!-- DISPLAY MENU -->
@@ -354,7 +352,7 @@ $sno = $row + 1;
         <td><?php echo $row['menu_price'];?></td>
         <td><?php echo $row['menu_description'];?></td>
         <td><?php echo $row['menu_status'];?></td>
-        <td><a href='/Project/ApplicationLayer/ManageOrderInterface/addOrder_Cart.php?menu_id=$menu_id"<?php echo $row['menu_id']; ?>"'><button>Add to Cart</button></a></td>
+        <td><a href='/Project/ApplicationLayer/ManageOrderInterface/addOrder_Cart.php?id="<?php echo $row['menu_id']; ?>"'><button>Add to Cart</button></a></td>
         
     </tr>
     <?php endwhile;?>
