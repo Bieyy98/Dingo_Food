@@ -155,12 +155,11 @@ function makeConnect($sql){
 
   </div>
   <center>
+    <h2> Refund request list</h2>
     <form action="refundSearch.php" method="post">
     Search <input type="text" name="search"><br>
     <input type ="submit">
     </form>
-
-    <h2> Refund request list</h2>
     <form method="post">
     <table class="content-table">
 
