@@ -1,5 +1,5 @@
 <?php 
-require_once 'C:/xampp/htdocs/Project/BusinessServiceLayer/controller/menuController.php';
+require_once 'C:/xampp/htdocs/Dingo_Food/BusinessServiceLayer/controller/menuController.php';
 
 $sql = "SELECT * FROM `menu`";
 $res = mysqli_query($connection, $sql);
@@ -87,12 +87,21 @@ function filterTable($query)
 
     <meta name="author" content="">
 
+<<<<<<< HEAD
     <title>DINGO FOOD - Food Ordering System (FOS)</title>
     <link href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.css" rel="stylesheet"
         type='text/css'>
     </link>
     <link href="/Project/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="/Project/css/home.css"> 
+=======
+		<title>DINGO FOOD - Food Ordering System (FOS)</title>
+		<link href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.css" 
+				rel="stylesheet"  type='/Dingo_Food/text/css'>
+		</link>
+		    <link href="/Dingo_Food/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+		<link rel="stylesheet" href="/Dingo_Food/css/home.css">
+>>>>>>> Report
 
 <!-- STYLE -->
 
@@ -205,7 +214,7 @@ html {
 }
 
 .hero-image {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("/Project/img/dingoLogo3.jfif");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("/Dingo_Food/img/dingoLogo3.jfif");
   height: 50%;
   background-position: center;
   background-repeat: no-repeat;
@@ -295,6 +304,7 @@ $sno = $row + 1;
 
   <div style="list-style-type: none;" id="navigation-bar">
 
+<<<<<<< HEAD
             <ul>
                 <li><a href="/Project/ApplicationLayer/ManageCustomerInterface/home.php"><i class="fa fa-home"></i><span>Home</span></a></li>
                 <li><a href="/Project/ApplicationLayer/ManageMenuInterface/viewMenu.php"><i class="fa fa-book"></i><span>Menu</span></a></li>
@@ -305,6 +315,17 @@ $sno = $row + 1;
                 
                 <a href="/Project/ApplicationLayer/ManageCustomerInterface/customerProfile.php" id="topnav-right"><i class="fa fa-user"></i><span>Hello <?php echo $name; ?></span></a>
             </ul>
+=======
+	<ul>
+        <li><a href="/Dingo_Food/ApplicationLayer/ManageCustomerInterface/home.php"><i class="fa fa-home"></i><span>Home</span></a></li>
+        <li><a href="/Dingo_Food/ApplicationLayer/ManageMenuInterface/viewMenu.php"><i class="fa fa-book"></i><span>Menu</span></a></li>
+        <li><a href="/Dingo_Food/ApplicationLayer/ManageOrderInterface/cart.php"><i class="fa fa-shopping-cart"></i><span>Cart</span></a></li>
+        <li><a href="/Dingo_Food/ApplicationLayer/ManageRefundInterface/refundList.php"><i class="fa fa-money"></i><span>Refund</span></a></li>
+        <li><a href="/Dingo_Food/ApplicationLayer/ManageCustomerInterface/logout.php" onclick="return confirm('Are you sure you want to sign out?')"><i class="fa fa-sign-out"></i><span>Sign Out</span></a></li>
+                
+        <a href="/Dingo_Food/ApplicationLayer/ManageCustomerInterface/customerProfile.php" id="topnav-right"><i class="fa fa-user"></i><span>Hello <?php echo $name; ?></span></a>
+    </ul>
+>>>>>>> Report
 
   </div>
   
@@ -324,6 +345,7 @@ $sno = $row + 1;
 
 <!-- DISPLAY MENU -->
 
+<<<<<<< HEAD
 <div class="col-sm-20 main-content">
 
 <form action="/Project/ApplicationLayer/ManageMenuInterface/viewMenu.php" method="post">
@@ -359,6 +381,32 @@ $sno = $row + 1;
 </table>
 </form>
 
+=======
+            <div class="col-sm-20 main-content">
+                <div class="row">
+            <?php
+                if (isset($errmsg)){
+                    echo "<h3>$errmsg</h3>";
+                }
+                foreach($data as $row){
+                    $menu_id = $row['menu_id'];
+                    echo "<div class='col-sm-4'>
+                    		<div class='card'>
+                    		<a href='/Dingo_Food/ApplicationLayer/ManageOrderInterface/addOrder_Cart.php?menu_id=$menu_id'>
+                    		<img class='picture' src='/Dingo_Food/img/". $row['menu_image'] ."'></a>
+                    			<h3>".$row['menu_name'] ."</h3>
+                    		
+                    			<p class='price'>RM". $row['menu_price'] ."</p>
+                    			<p>". $row['menu_description'] ."</p>
+      							<p class='status'> ". $row['menu_status'] ."</p>
+      							<p><a href='/Dingo_Food/ApplicationLayer/ManageOrderInterface/addOrder_Cart.php?id=" . $row['menu_id'] . "'><button>Add to Cart</button></a></p>
+                    		</div>
+                    		<br><br>
+                    	</div>";
+   				}
+            ?>
+        		</div>
+>>>>>>> Report
 <br>
 
 <!-- MENU PAGE NUMBER -->
@@ -395,21 +443,21 @@ $sno = $row + 1;
   
 <!-- Bootstrap core JavaScript -->
 
-    <script src="/Project/vendor/jquery/jquery.min.js"></script>
-    <script src="/Project/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="/Dingo_Food/vendor/jquery/jquery.min.js"></script>
+    <script src="/Dingo_Food/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
 <!-- Plugin JavaScript -->
 
-    <script src="/Project/vendor/jquery-easing/jquery.easing.min.js"></script>
+    <script src="/Dingo_Food/vendor/jquery-easing/jquery.easing.min.js"></script>
 
 <!-- Contact form JavaScript -->
 
-    <script src="/Project/js/jqBootstrapValidation.js"></script>
-    <script src="/Project/js/contact_me.js"></script>
+    <script src="/Dingo_Food/js/jqBootstrapValidation.js"></script>
+    <script src="/Dingo_Food/js/contact_me.js"></script>
 
 <!-- Custom scripts for this template -->
 
-    <script src="/Project/js/agency.min.js"></script>
+    <script src="/Dingo_Food/js/agency.min.js"></script>
 
 
 
