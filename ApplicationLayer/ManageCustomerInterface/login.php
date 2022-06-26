@@ -163,7 +163,8 @@ body {
                         <tr>
                             <th><i class="fa fa-lock"></i>&nbsp &nbsp &nbsp<b>Password </b></th>
                         <tr>
-                            <td><input type="password" name="password" placeholder="Password" required></td>
+                        <td><input type="password" name="password" placeholder="Password" required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" 
+							title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters"></td>
                         <tr>
                             <td style="text-align:center" colspan="2">Don't have one? <a
                                     href="../../ApplicationLayer/ManageCustomerInterface/signUp.php"> Create now! </a>
